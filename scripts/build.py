@@ -16,11 +16,14 @@ if origin:
 dist.mkdir(exist_ok=True)
 for item in ("index.html", "styles.css", "main.js", "_headers"):
     shutil.copy2(root / item, dist / item)
-for directory in ("work", "assets/portfolio"):
+for directory in (
+    "work", "services", "rates", "process", "agencies", "contact", "call",
+    "assets/portfolio", "assets/images/testimonials",
+):
     shutil.copytree(root / directory, dist / directory, dirs_exist_ok=True)
 fonts = dist / "assets/fonts"
 fonts.mkdir(exist_ok=True)
-for filename in ("Sochne-400-Regular.woff2", "Sochne-600-SemiBold.woff2", "69db63dc2e8675a7ac6108f9_LyonText-400-Regular-Italic.woff2"):
+for filename in ("Sochne-400-Regular.woff2", "Sochne-600-SemiBold.woff2", "LyonText-400-Regular.woff2", "69db63dc2e8675a7ac6108f9_LyonText-400-Regular-Italic.woff2"):
     shutil.copy2(root / "assets/fonts" / filename, fonts / filename)
 sitemap = Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
 robots = "User-agent: *\nAllow: /\n"
@@ -28,7 +31,7 @@ if origin:
     for page in sorted(dist.rglob("index.html")):
         relative = page.parent.relative_to(dist).as_posix()
         url = origin + "/" + (relative + "/" if relative != "." else "")
-        image = origin + "/assets/portfolio/" + (page.parent.name + "-home.webp" if relative != "." else "social.jpg")
+        image = origin + "/assets/portfolio/" + (page.parent.name + "-home.webp" if relative.startswith("work/") else "social.jpg")
         metadata = f'<link rel="canonical" href="{escape(url)}"><meta property="og:url" content="{escape(url)}"><meta property="og:image" content="{escape(image)}"><meta name="twitter:image" content="{escape(image)}">'
         page.write_text(page.read_text().replace("<!-- deployment-meta -->", metadata))
         SubElement(SubElement(sitemap, "url"), "loc").text = url

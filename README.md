@@ -1,10 +1,10 @@
 # Nsikan-Abasi Essiet — Developer Portfolio
 
-A static portfolio with six project case studies and an interactive, seeded terrain generator. The initial landscape and all portfolio content are visible without JavaScript.
+A static portfolio with a portrait introduction, six project galleries, inline case-study details and a testimonial section between the two groups of work. Each project also has a standalone case-study page.
 
 ## Development
 
-Edit the page templates in `scripts/render.py` and project records in `scripts/projects.json`. Run `python3 scripts/render.py` from the repository root to update the checked-in HTML. The visual system is in `styles.css` and terrain rendering is in `assets/portfolio/terrain.js`.
+Edit the page templates in `scripts/render.py` and project records in `scripts/projects.json`. Run `python3 scripts/render.py` from the repository root to update the checked-in HTML. The visual system is in `styles.css`. The portfolio includes separate pages for Services, Rates, Process, Agencies, Contact and call requests.
 
 ## Build and publish
 
