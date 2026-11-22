@@ -98,3 +98,24 @@ html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans-se
 .nav_burger-line {
   transition: transform 220ms ease;
 }
+
+
+/* Respect operating-system motion preferences without altering the default choreography. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .cagdas-hero-bg {
+    transform: none !important;
+  }
+}
