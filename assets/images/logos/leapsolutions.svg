@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40" fill="none">
+  <path d="M12 28L24 12L36 28" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 16V28" stroke="#126ef5" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="48" y="25" fill="#ffffff" font-family="sans-serif" font-weight="600" font-size="17" letter-spacing="0.5">LEAP SOLUTIONS</text>
+</svg>

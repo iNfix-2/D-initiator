@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 40" fill="none">
+  <circle cx="16" cy="18" r="6" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="26" cy="18" r="6" stroke="#126ef5" stroke-width="2"/>
+  <circle cx="21" cy="26" r="6" stroke="#ffffff" stroke-width="2"/>
+  <text x="42" y="25" fill="#ffffff" font-family="sans-serif" font-weight="600" font-size="16" letter-spacing="0.8">WINEPRESS</text>
+</svg>
